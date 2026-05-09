@@ -4,18 +4,18 @@ A comprehensive full-stack web application for team project management with role
 
 ## ✨ Key Features
 
-### 🔐 Role-Based Access Control
+###  Role-Based Access Control
 - **Admin**: Manage users, projects, system statistics
 - **Manager**: Create projects, manage teams, assign tasks, track performance
 - **Member**: View projects, manage assigned tasks, update status
 
-### 📊 Project Management
+###  Project Management
 - Create and manage projects
 - Add/remove team members dynamically
 - View team performance metrics
 - Project-specific statistics
 
-### ✅ Task Management
+###  Task Management
 - Create tasks with Title, Description, Due Date, Priority
 - Assign tasks to team members
 - Update status (To Do, In Progress, Done)
@@ -86,49 +86,6 @@ npm start
 ```
 Frontend runs on `http://localhost:3000`
 
-## 📚 API Documentation
-
-### Authentication Endpoints (`/api/v1/`)
-```
-POST   /sign-in     - Register new user
-POST   /log-in      - User login
-```
-
-### Admin Endpoints (`/api/v3/`)
-```
-GET    /get-all-users           - Get all users
-POST   /create-user             - Create new user
-PUT    /update-user-role        - Update user role
-DELETE /delete-user             - Delete user
-GET    /dashboard-stats         - Get system statistics
-```
-
-### Project Endpoints (`/api/v4/`)
-```
-POST   /create-project          - Create project
-GET    /get-projects            - Get user's projects
-GET    /get-project/:id         - Get specific project
-PUT    /add-members             - Add members to project
-PUT    /remove-members          - Remove members from project
-PUT    /update-project          - Update project details
-GET    /team-performance/:id    - Get team performance
-DELETE /delete-project          - Delete project
-```
-
-### Task Endpoints (`/api/v2/`)
-```
-POST   /create-task             - Create task
-GET    /get-project-tasks/:id   - Get project tasks
-GET    /get-my-tasks            - Get user's tasks
-GET    /get-tasks-by-status/:projectId/:status - Filter by status
-GET    /get-overdue-tasks/:id   - Get overdue tasks
-PUT    /update-task-status      - Update task status
-PUT    /update-task             - Update task details
-PUT    /toggle-importance       - Toggle task importance
-DELETE /delete-task             - Delete task
-GET    /get-dashboard-stats/:id - Get task statistics
-```
-
 ## 🗂️ Project Structure
 
 ```
@@ -173,34 +130,6 @@ project-manager/
 │
 └── README.md
 ```
-
-## 🔐 User Roles & Permissions
-
-### Admin
-- ✅ Create/delete/update users
-- ✅ Change user roles
-- ✅ View all projects and tasks
-- ✅ Delete any project or task
-- ✅ Access admin dashboard
-- ✅ View system statistics
-
-### Manager
-- ✅ Create projects
-- ✅ Add/remove team members
-- ✅ Create and assign tasks
-- ✅ Update task details and status
-- ✅ View team performance
-- ✅ Delete own tasks and projects
-- ❌ Cannot manage users or system settings
-
-### Member
-- ✅ View assigned projects
-- ✅ View assigned tasks
-- ✅ Update assigned task status
-- ✅ Mark tasks as important
-- ❌ Cannot create projects
-- ❌ Cannot create or delete tasks
-- ❌ Cannot manage team members
 
 ## 🎯 Usage Guide
 
